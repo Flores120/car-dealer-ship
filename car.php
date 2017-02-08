@@ -20,24 +20,24 @@ $lexus->miles = 8234;
 $lexus->image = "img/lexus.jpg";
 
 $subaru = new Car();
-$subaru->make = "2015 Honda Civic Type R";
-$subaru->price = 26000;
-$subaru->miles = 1234;
-$subaru->image = "img/typer.jpg";
+$subaru->make = "2015 Subaru Legacy";
+$subaru->price = 32100;
+$subaru->miles = 2123;
+$subaru->image = "img/legacy.jpg";
 
 $range_rover = new Car();
-$range_rover->make = "2015 Honda Civic Type R";
-$range_rover->price = 26000;
-$range_rover->miles = 1234;
-$range_rover->image = "img/typer.jpg";
+$range_rover->make = "2016 Range Rover";
+$range_rover->price = 89000;
+$range_rover->miles = 1235;
+$range_rover->image = "img/rrover.jpg";
 
 $dodge = new Car();
-$dodge->make = "2015 Honda Civic Type R";
-$dodge->price = 26000;
-$dodge->miles = 1234;
-$dodge->image = "img/typer.jpg";
+$dodge->make = "2016 Dodge Ram";
+$dodge->price = 29799;
+$dodge->miles = 45322;
+$dodge->image = "img/ram.jpg";
 
-$cars = array($honda);
+$cars = array($honda, $lexus, $subaru, $range_rover, $dodge);
 
 // $cars
 // foreach ($cars as $car) {
@@ -48,7 +48,7 @@ $cars = array($honda);
  <!DOCTYPE html>
  <html>
    <head>
-     <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
      <link rel="stylesheet" href="styles.css">
      <title>Cars</title>
    </head>
