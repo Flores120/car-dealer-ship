@@ -39,20 +39,28 @@ $dodge->image = "img/ram.jpg";
 
 $cars = array($honda, $lexus, $subaru, $range_rover, $dodge);
 
-// $cars
-// foreach ($cars as $car) {
-//   # code...
-// }
+$cars_matching_search = array();
+foreach ($cars as $car) {
+  if ($car->price < $_GET["price"]){
+    array_push($cars_matching_search, $car);
+  }
+}
  ?>
 
  <!DOCTYPE html>
  <html>
    <head>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-     <link rel="stylesheet" href="styles.css">
-     <title>Cars</title>
+     <link rel="stylesheet" href="css/styles.css">
+     <title>Car Dealer Home</title>
    </head>
    <body>
+     <div class="nav">
+       <ul>
+         <li><a href="car_form.html">Home</a></li>
+         <li><a href="car.php">Show All Cars</a></li>
+       </ul>
+     </div>
      <div class="container">
        <div class="car-container">
          <?php
@@ -60,7 +68,7 @@ $cars = array($honda, $lexus, $subaru, $range_rover, $dodge);
              echo "<h2> $car->make </h2>";
              echo "<ul>";
                  echo "<li> $$car->price </li>";
-                 echo "<li> $$car->miles </li>";
+                 echo "<li> $car->miles </li>";
                  echo "<li><img src='$car->image'></li>";
              echo "</ul>";
              }
