@@ -37,7 +37,13 @@ $dodge->price = 29799;
 $dodge->miles = 45322;
 $dodge->image = "img/ram.jpg";
 
-$cars = array($honda, $lexus, $subaru, $range_rover, $dodge);
+$toyota = new Car();
+$toyota->make = "2016 Dodge Ram";
+$toyota->price = 32000;
+$toyota->miles = 64321;
+$toyota->image = "img/tacoma.jpg";
+
+$cars = array($honda, $lexus, $subaru, $range_rover, $dodge, $toyota);
 
 $cars_matching_search = array();
 foreach ($cars as $car) {
@@ -52,6 +58,7 @@ foreach ($cars as $car) {
    <head>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
      <link rel="stylesheet" href="css/styles.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
      <title>Car Dealer Home</title>
    </head>
    <body>
@@ -65,14 +72,16 @@ foreach ($cars as $car) {
        <div class="car-container">
          <?php
              foreach ($cars as $car) {
+               echo "<div class='car'>";
              echo "<h2> $car->make </h2>";
-             echo "<ul>";
-                 echo "<li> $$car->price </li>";
-                 echo "<li> $car->miles </li>";
-                 echo "<li><img src='$car->image'></li>";
-             echo "</ul>";
+                 echo "<h4>$$car->price</h4>";
+                 echo "<h4>$car->miles miles</h4>";
+                 echo "<img src='$car->image'>";
+             echo "<button type='submit' name='button'>View Details</button>";
+             echo "</div>";
              }
           ?>
+
        </div>
      </div>
    </body>

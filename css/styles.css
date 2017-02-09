@@ -1,21 +1,75 @@
+.car {
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  margin-top: 20px;
+  position: relative; }
+  .car img {
+    width: 100%;
+    height: 300px; }
+  .car button {
+    z-index: 10;
+    position: absolute;
+    left: 15px;
+    bottom: 5px;
+    background: inherit;
+    height: 50px;
+    width: 30%;
+    outline: none;
+    color: white;
+    border: 3px solid white;
+    border-radius: 5px;
+    transition: all .6 sec; }
+    .car button:hover {
+      border-color: red; }
+  @media (max-width: 1650px) {
+    .car {
+      width: 30%; } }
+  @media (max-width: 1250px) {
+    .car {
+      width: 45%;
+      max-width: 400px;
+      min-width: 353px;
+      margin: 10px; } }
+  @media (max-width: 400px) {
+    .car {
+      width: 100%;
+      min-width: 100%; } }
+
 .car-container {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center; }
-  .car-container li {
-    list-style-type: none; }
-  .car-container img {
-    width: 500px; }
+  flex-wrap: wrap;
+  flex-grow: 2;
+  margin-top: 90px;
+  justify-content: center; }
+
+.content-container {
+  margin-top: 90px; }
+
+.container {
+  width: 95%; }
 
 .nav {
   width: 100%;
   height: 80px;
-  background-color: #844242; }
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  z-index: 2; }
   .nav li {
     list-style-type: none;
     float: left;
     margin-left: 50px;
     margin-top: 25px;
     font-size: 20px; }
+
+.container {
+  width: 90%; }
+
+@media (max-width: 400px) {
+  body {
+    width: 100%;
+    max-width: 400px; } }
 
 /*# sourceMappingURL=styles.css.map */
